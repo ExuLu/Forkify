@@ -48,7 +48,6 @@ export const loadRecipe = async function (id) {
 
 export const loadSearchResults = async function (query) {
   try {
-    // if (state.search.query !== query) state.search.page = 1;
 
     state.search.query = query;
     const data = await AJAX(`${API_URL}?search=${query}&key=${KEY}`);
@@ -122,7 +121,6 @@ const clearBookmarks = function () {
   localStorage.clear('bookmarks');
 };
 
-// clearBookmarks();
 
 export const uploadRecipes = async function (newRecipe) {
   try {
